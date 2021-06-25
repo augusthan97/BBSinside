@@ -1,0 +1,21 @@
+server:
+  port: 8282
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 200
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: ggozlo
+    username: ggozlo
+
+
+logging.level:
+  org.hibernate.SQL: debug
+
