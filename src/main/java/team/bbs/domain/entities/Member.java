@@ -1,4 +1,4 @@
-package team.bbs.entities;
+package team.bbs.domain.entities;
 
 import lombok.*;
 

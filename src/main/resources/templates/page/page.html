@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/head::head"></head>
+<body>
+
+<header th:replace="layout/top::header"></header>
+
+<div>
+    <table>
+        <thead class="container text-center align-content-center">
+        <tr>
+            <th>순서</th>
+            <th>작성자</tr>
+            <th>제목<th>
+            <th>내용</th>
+            <th>추천</th>
+            <th>비추천</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="data : ${board}">
+            <td th:text="${data.num}" class="text-center"></td>
+            <td th:text="${data.memberId}" style="cursor:pointer; text-align: center;"></td>
+            <td th:text="${data.title}" style="cursor:pointer; text-align: center;"></td>
+            <td th:text="${data.content}" style="cursor:pointer; text-align: center;"></td>
+            <td th:text="${data.recommend}" style="cursor:pointer; text-align: center;"></td>
+            <td th:text="${data.unRecommend}" style="cursor:pointer; text-align: center;"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style="text-align: right">
+    <button onclick="location.href='/write'">글작성</button>
+</div>
+<footer th:replace="layout/footer::footer"></footer>
+</body>
+</html>

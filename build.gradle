@@ -8,35 +8,36 @@ group = 'team'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
 	}
-}
 
-repositories {
-	mavenCentral()
-}
+	repositories {
+		mavenCentral()
+	}
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-mail'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-	implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+	dependencies {
+		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+		implementation 'org.springframework.boot:spring-boot-starter-mail'
+		implementation 'org.springframework.boot:spring-boot-starter-security'
+		implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+		implementation 'org.springframework.boot:spring-boot-starter-validation'
+		implementation 'org.springframework.boot:spring-boot-starter-web'
+		implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+		implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+		compileOnly 'org.projectlombok:lombok'
+		runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+		annotationProcessor 'org.projectlombok:lombok'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		testImplementation 'org.springframework.security:spring-security-test'
+		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
 	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.1'
 	implementation group: 'com.oracle.database.nls', name: 'orai18n', version: '21.1.0.0'
-}
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.4'
+	}
 
 test {
 	useJUnitPlatform()

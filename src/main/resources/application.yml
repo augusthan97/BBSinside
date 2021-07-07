@@ -15,7 +15,12 @@ spring:
     password: ggozlo
     username: ggozlo
 
+  security:
+    user:
+      name: user
+      password: 1234
 
 logging.level:
   org.hibernate.SQL: debug
+
 
